@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-import { getResumeHref } from "@/lib/env/resume-url";
+import { getResumeDownloadName, getResumeHref } from "@/lib/env/resume-url";
 
 import { Download, MessagesSquare, MousePointerClick } from "lucide-react";
 import { m } from "@/components/motion-wrapper";
@@ -24,6 +24,7 @@ const buttonBaseClasses =
 export const HeroButtons = () => {
   const t = useTranslations("Hero");
   const resumeHref = getResumeHref();
+  const resumeDownloadName = getResumeDownloadName();
 
   const handleClick = (section: string) => {
     const sectionEl = document.getElementById(section);
@@ -60,7 +61,7 @@ export const HeroButtons = () => {
 
       <Link
         href={resumeHref}
-        download
+        download={resumeDownloadName}
         className={cn(
           buttonBaseClasses,
           "text-darkest/70 border-darkest/35 bg-white/50 border dark:text-off-w/60 dark:border-off-w/45 dark:bg-off-w/05",

@@ -46,6 +46,6 @@ npm run build
 
 After deploy, test:
 - Contact form submission (Turnstile + Resend)
-- Resume download (`/Nakamura-Kazuya-Resume.pdf`)
+- Resume download (`/Nakamura Kazuya.pdf`)
 - Locale switch (`en`/`ja`)
 - Theme toggle (light/dark)
